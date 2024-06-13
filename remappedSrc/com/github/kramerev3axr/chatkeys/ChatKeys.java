@@ -56,7 +56,7 @@ public class ChatKeys implements ModInitializer {
 	}
 
 	private String getBiome(ServerPlayerEntity sender) {
-		String rawBiome = Identifier.of(sender.getEntityWorld().getBiome(sender.getBlockPos()).getIdAsString()).getPath();
+		String rawBiome = new Identifier.of(sender.getEntityWorld().getBiome(sender.getBlockPos()).getIdAsString()).getPath();
 		return fixName(rawBiome);
 	}
 
